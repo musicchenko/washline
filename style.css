@@ -673,6 +673,9 @@ padding-top: 116px;
 	text-transform: uppercase;
 	color: #A83040;
 }
+#sotrud p a {
+	font-size: 18px;
+}
 p#contacts {
     padding-top: 10px;
     padding-bottom: 10px;
