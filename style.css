@@ -1087,8 +1087,13 @@ footer p {
 }
 
 @media screen and (max-width: 375px) {
+	#title0 {
+			font-size: 20px;
+	}
+
 	#title1 {
-		margin-bottom: 30px;
+		font-size: 14px;
+		margin-bottom: 20px;
 	}
 
 	.car-cell img {
