@@ -62,8 +62,8 @@
 				</div>
 			</div>
 			<nav>
-				<a class="logo-container pc-menu" href="#header"><img class="logo" src="images/logo.png" /></a>
-				<a onclick="toggleBurger(event)" class="logo-container mobile-menu"><img class="logo" src="images/logo.png" /></a>
+				<a class="logo-container pc-menu" href=""><img class="logo" src="images/logo.png" /></a>
+				<a class="logo-container mobile-menu" href=""><img class="logo" src="images/logo.png" /></a>
 				<ul class="ru_lang pc-menu">
 					<li><a href="#avtomoikay">Услуги и цены</a></li>
 					<li><a href="#specialoffersy">Спецпредложения</a></li>
@@ -101,16 +101,16 @@
 				</button>
 				<menu id="mobile-menu">
 					<ul class="ru_lang">
-						<li><a href="#avtomoikay">Услуги и цены</a></li>
-						<li><a href="#specialoffersy">Спецпредложения</a></li>
-						<li><a href="#sotrud">Сотрудничество</a></li>
-						<li><a href="#contacts">Контакты</a></li>
+						<li><a onclick="hideMenu()" href="#avtomoikay">Услуги и цены</a></li>
+						<li><a onclick="hideMenu()" href="#specialoffersy">Спецпредложения</a></li>
+						<li><a onclick="hideMenu()" href="#sotrud">Сотрудничество</a></li>
+						<li><a onclick="hideMenu()" href="#contacts">Контакты</a></li>
 					</ul>
 					<ul class="lv_lang">
-						<li><a href="#avtomoikay">Pakalpojumi un cenas</a></li>
-						<li><a href="#specialoffersy">Speciālie piedāvājumi</a></li>
-						<li><a href="#sotrud">Sadarbība</a></li>
-						<li><a href="#contacts">Kontakti</a></li>
+						<li><a onclick="hideMenu()" href="#avtomoikay">Pakalpojumi un cenas</a></li>
+						<li><a onclick="hideMenu()" href="#specialoffersy">Speciālie piedāvājumi</a></li>
+						<li><a onclick="hideMenu()" href="#sotrud">Sadarbība</a></li>
+						<li><a onclick="hideMenu()" href="#contacts">Kontakti</a></li>
 					</ul>
 					<div id="select-lang-mobile">
 						<img onclick="selectRu();" id="selectRu" src="images/ru.png">

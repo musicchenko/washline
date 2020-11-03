@@ -63,6 +63,11 @@ function toggleBurger(e) {
 		document.getElementById("mobile-menu").classList.add("opened");
 	}
 }
+function hideMenu() {
+	const burger = document.getElementById("burger-btn");
+	burger.classList.remove("opened");
+	document.getElementById("mobile-menu").classList.remove("opened");
+}
 /*
 // Работа с виджетом recaptcha
 // 1. Получить ответ гугл капчи
