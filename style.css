@@ -1230,6 +1230,10 @@ footer p {
 }*/
 
 @media screen and (max-width: 1024px) {
+	header {
+		background-size: 300%;
+	}
+
 	#footerinfo {
 		text-align: left;
 		display: flex;
