@@ -1012,7 +1012,6 @@ footer p {
 
 @media screen and (max-width: 866px) {
 	#avtomoika {
-		top: 150px;
 	}
 
 	#otable tr td:first-child,
@@ -1048,7 +1047,7 @@ footer p {
 	}
 
 	#sotrud {
-		padding-top: 150px;
+		padding: 150px 0;
 	}
 
 	#mobile-menu {
