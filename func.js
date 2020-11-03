@@ -18,7 +18,11 @@ function selectLv() {
     for(var i = 0; i < divsToShow.length; i++){
     	if (divsToShow[i].id == "aboutus" || divsToShow[i].id == "mail") {
         divsToShow[i].style.display = "none";
-    	} else {
+    	}
+			else if (divsToShow[i].classList.contains("inline-block")) {
+				divsToShow[i].style.display = "inline-block";
+			}
+			else {
         divsToShow[i].style.display = "block";
     	}
     }
@@ -36,7 +40,11 @@ function selectRu() {
     for(var i = 0; i < divsToShow.length; i++){
     	if (divsToShow[i].id == "aboutus" || divsToShow[i].id == "mail") {
         divsToShow[i].style.display = "none";
-    	} else {
+    	}
+			else if (divsToShow[i].classList.contains("inline-block")) {
+				divsToShow[i].style.display = "inline-block";
+			}
+			else {
         divsToShow[i].style.display = "block";
     	}
     }
