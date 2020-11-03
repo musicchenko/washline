@@ -902,6 +902,10 @@ footer p {
 	display: none;
 }
 
+.pc-menu {
+	display: none;
+}
+
 @media screen and (max-width: 950px) {
 	#stypes {
 		flex-direction: column;
