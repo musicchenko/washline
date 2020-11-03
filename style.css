@@ -1087,7 +1087,12 @@ footer p {
 	.logo {
 		width: 150px;
 		height: auto;
-		top: 35px;
+	}
+
+	.logo-container.mobile-menu {
+		top: 33px;
+		position: absolute;
+		display: block;
 	}
 }
 
