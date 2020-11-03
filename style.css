@@ -394,6 +394,7 @@ header ul li {
 	z-index: 80;
 
 }
+#avtomoikayy,
 #avtomoikay {
 	padding-bottom: 0px;
 	padding-top: 0;
@@ -410,7 +411,7 @@ header ul li {
 	width: 90%;
 	margin: auto;
 	font-family: Futura PT Bold;
-	font-size: 16px;
+	font-size: 18px;
 	margin-bottom: 0px;
 }
 
@@ -556,6 +557,7 @@ padding-top: 116px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+#specialoffersyy p,
 #specialoffersy p {
 	width: 100%;
 	font-family: Futura PT Bold;
@@ -664,7 +666,7 @@ padding-top: 116px;
 	margin-right: auto;
 	margin-left: auto;
 }
-#sotrud h6, #photos p, p#contacts {
+#sotrud h6, #photos p, p#contacts, p#contactss {
 	font-family: Futura PT Bold;
 	font-style: normal;
 	font-size: 26px;
@@ -676,6 +678,7 @@ padding-top: 116px;
 #sotrud p a {
 	font-size: 18px;
 }
+p#contactss,
 p#contacts {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -980,7 +983,7 @@ footer p {
     width: 90%;
     font-family: Futura PT Bold;
     font-style: normal;
-    font-size: 21.5px;
+    font-size: 18px;
     letter-spacing: 0.03em;
     color: #000000;
     padding-bottom: 30px;
@@ -1029,7 +1032,7 @@ footer p {
     width: 90%;
     font-family: Futura PT Bold;
     font-style: normal;
-    font-size: 21.5px;
+    font-size: 18px;
     letter-spacing: 0.03em;
     color: #000000;
     padding-bottom: 30px;
