@@ -265,7 +265,7 @@ textarea, input {
 	color: #A83040;
 }
 
-#logo {
+.logo {
 	vertical-align: middle;
 	width: 240px;
 }
@@ -1033,7 +1033,7 @@ footer p {
 		justify-content: flex-end;
 	}
 
-	#logo-container {
+	.logo-container {
 		align-self: flex-start;
 		align-self: flex-start !important;
 		float: left;
@@ -1084,7 +1084,7 @@ footer p {
 		height: 35px;
 	}
 
-	#logo {
+	.logo {
 		width: 150px;
 		height: auto;
 		top: 35px;

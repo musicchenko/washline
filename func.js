@@ -53,7 +53,7 @@ function selectRu() {
   }
 }
 function toggleBurger(e) {
-	const burger = e.currentTarget;
+	const burger = document.getElementById("burger-btn");
 	if(burger.classList.contains("opened")) {
 		burger.classList.remove("opened");
 		document.getElementById("mobile-menu").classList.remove("opened");
