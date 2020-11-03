@@ -1240,6 +1240,8 @@ footer p {
 
 	#cross {
 		position: fixed;
+		margin-left: auto !important;
+		right: 10%;
 	}
 
 	#footerinfo {
@@ -1369,6 +1371,10 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+	#stypes table {
+		font-size: 12px !important;
+	}
+
 	#sp_offers {
 		flex-direction: column;
 	}
@@ -1495,8 +1501,21 @@ footer p {
 		font-size:
 	}
 
+	#but {
+		display: none;
+	}
+
+	#title0 {
+		margin-top: 30px !important;
+	}
+
 	#title1 {
 		font-size: 16px;
+	}
+
+	#mail {
+		overflow: auto;
+		top: 0 !important;
 	}
 }
 
