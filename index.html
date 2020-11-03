@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -6,17 +6,61 @@
 	<meta name="keywords" content="автомойка,автомойка в Риге,автомойка цена,автомойка и кафе,шиномонтаж и автомойка,шиномонтаж,шиномонтаж цены,шиномонтаж цены в Риге,шиномонтаж рядом,химчистка салона,химчистка салона в Риге,химчистка салона авто в риге,химчистка салона авто цена,услуги детейлинга,услуги детейлинга цены">
 	<meta name="keywords" content="automazgātava Rīga,automazgātava ar rokām,automazgātava ar rokam riga,automazgātava cenas,automazgatava centrs,automazgātuve,riepu montāža Rīga,riepu montāža cenas,auto riepu montāža,riepu montāža un balansēšana,riepu montāžas cenrādis,detailing riga,Auto detailing pakalpojumi">
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.fancybox.css" media="screen" />
 	<link rel="icon" href="images/favicon.png" type="image/png">
-	<meta name="viewport" content="width=viewport, initial-scale=1.0, user-scalable=no">
 	<script type="text/javascript" src="func.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-  	<script src="jquery-1.12.4.min.js"></script>
-	<title>RUS Washline - качественная автомойка в Риге</title>
+  <script src="jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="jquery.fancybox.js"></script>
+	<meta name="viewport" content="width=viewport, initial-scale=1.0, user-scalable=no">
+	<title>Washline - качественная автомойка в Риге</title>
 </head>
 <body>
 	<a href="#header"><img id="up" src="images/up.png"></a>
 	<img onclick="contact();" id="message" src="images/message.png">
-	<header id="header">
+	<header>
+		<div class="mobile-header mobile-version">
+			<a class="mobile-logo" href="">
+				<img src="images/logo.png">
+			</a>
+			<button onclick="toggleBurger(event)" id="burger-btn">
+				<svg id="burger-icon" viewBox="0 0 270.45 152">
+					<path d="M126.57,261.77H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
+					<path d="M126.57,192H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
+					<path d="M126.57,332H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
+				</svg>
+			</button>
+			<menu id="mobile-menu">
+				<ul class="ru_lang">
+					<li><a onclick="hideMenu()" href="#avtomoikay">Услуги и цены</a></li>
+					<li><a onclick="hideMenu()" href="#specialoffersy">Спецпредложения</a></li>
+					<li><a onclick="hideMenu()" href="#sotrud">Сотрудничество</a></li>
+					<li><a onclick="hideMenu()" href="#contacts">Контакты</a></li>
+				</ul>
+				<ul class="lv_lang">
+					<li><a onclick="hideMenu()" href="#avtomoikay">Pakalpojumi un cenas</a></li>
+					<li><a onclick="hideMenu()" href="#specialoffersy">Speciālie piedāvājumi</a></li>
+					<li><a onclick="hideMenu()" href="#sotrud">Sadarbība</a></li>
+					<li><a onclick="hideMenu()" href="#contacts">Kontakti</a></li>
+				</ul>
+				<div id="select-lang-mobile">
+					<img onclick="selectRu();" id="selectRu" src="images/ru.png">
+					<img onclick="selectLv();" id="selectLv" src="images/lv.png">
+				</div>
+			</menu>
+			<!--<ul class="ru_lang">
+				<li><a href="#avtomoikay">Услуги и цены</a></li>
+				<li><a href="#specialoffersy">Спецпредложения</a></li>
+				<li><a href="#sotrud">Сотрудничество</a></li>
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+			<ul class="lv_lang">
+				<li><a href="#avtomoikayy">Pakalpojumi un cenas</a></li>
+				<li><a href="#specialoffersyy">Speciālie piedāvājumi</a></li>
+				<li><a href="#sotrud">Sadarbība</a></li>
+				<li><a href="#contactss">Kontakti</a></li>
+			</ul>-->
+		</div>
 		<div class="ru_lang" id="aboutus">
 			<img onclick="aboutUsHide();" id="cross" src="images/vect.png">
 			<p>Главная / О нас</p>
@@ -50,88 +94,71 @@
 					<button class="lv_lang" type="submit">Nosūtīt</button>
 				</div>
 			</form>
+
 			<div class="text-danger" id="recaptchaError"></div>
 		</div>
+
 		<div id="header1">
-			<div id="address">
-				<p class="ru_lang">Наш адрес: Azenes iela 5, IC Olimpia</p>
-				<p class="lv_lang">Mūsu adrese: Āzenes iela 5,T/C Olimpia</p>
-				<div id="select-lang">
-					<img onclick="selectRu();" id="selectRu" src="images/ru.png">
-					<img onclick="selectLv();" id="selectLv" src="images/lv.png">
+			<div class="polosa pc-version">
+				<div class="polosalogo">
+					<a id="logo" href="">
+						<img src="images/logo.png">
+					</a>
 				</div>
+<div class="polosaadres">
+<div id="address">
+		<p class="ru_lang">Наш адрес: Azenes iela 5, IC Olimpia</p>
+		<p class="lv_lang">Mūsu adrese: Āzenes iela 5,T/C Olimpia</p>
+	</div>
+	<div id="selectLang">
+		<img onclick="selectRu();" id="selectRu" src="images/ru.png">
+		<img onclick="selectLv();" id="selectLv" src="images/lv.png">
+	</div>
+	<ul class="ru_lang">
+		<li><a href="#avtomoikay">Услуги и цены</a></li>
+		<li><a href="#specialoffersy">Спецпредложения</a></li>
+		<li><a href="#sotrud">Сотрудничество</a></li>
+		<li><a href="#contacts">Контакты</a></li>
+	</ul>
+	<ul class="lv_lang">
+		<li><a href="#avtomoikayy">Pakalpojumi un cenas</a></li>
+		<li><a href="#specialoffersyy">Speciālie piedāvājumi</a></li>
+		<li><a href="#sotrud">Sadarbība</a></li>
+		<li><a href="#contactss">Kontakti</a></li>
+	</ul>
+</div>
+<div class="socseti">
+			<div id="instagram">
+				<a href="https://www.instagram.com/washline_riga/"><img src="images/instagram.png"></a>
 			</div>
-			<nav>
-				<a class="logo-container pc-menu" href=""><img class="logo" src="images/logo.png" /></a>
-				<a class="logo-container mobile-menu" href=""><img class="logo" src="images/logo.png" /></a>
-				<ul class="ru_lang pc-menu">
-					<li><a href="#avtomoikay">Услуги и цены</a></li>
-					<li><a href="#specialoffersy">Спецпредложения</a></li>
-					<li><a href="#sotrud">Сотрудничество</a></li>
-					<li><a href="#contacts">Контакты</a></li>
-				</ul>
-				<ul class="lv_lang pc-menu">
-					<li><a href="#avtomoikay">Pakalpojumi un cenas</a></li>
-					<li><a href="#specialoffersy">Speciālie piedāvājumi</a></li>
-					<li><a href="#sotrud">Sadarbība</a></li>
-					<li><a href="#contacts">Kontakti</a></li>
-				</ul>
-				<div id="contacts1">
-					<img id="phone" src="images/phone.png">
-					<div class="num-and-time">
-						<p id="num">27010167, 25393950</p>
-						<p class="ru_lang time not-inline">Время работы - 9:00-21:00 Пн-Вс</p>
-						<p class="lv_lang time not-inline">Darba laiks - 9:00-21:00 Pirm.-Sv.</p>
-					</div>
-					<div class="social-links-wrapper">
-						<div id="instagram">
-							<a href="https://www.instagram.com/washline_riga/"><img src="images/instagram.png"></a>
-						</div>
-						<div id="facebook">
-							<a href="#"><img src="images/facebook.png"></a>
-						</div>
-					</div>
-				</div>
-				<button onclick="toggleBurger(event)" id="burger-btn">
-					<svg id="burger-icon" viewBox="0 0 270.45 152">
-						<path d="M126.57,261.77H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
-						<path d="M126.57,192H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
-						<path d="M126.57,332H385.43c7.72,0,7.73-12,0-12H126.57c-7.72,0-7.73,12,0,12Z" transform="translate(-120.77 -180)"/>
-					</svg>
-				</button>
-				<menu id="mobile-menu">
-					<ul class="ru_lang">
-						<li><a onclick="hideMenu()" href="#avtomoikay">Услуги и цены</a></li>
-						<li><a onclick="hideMenu()" href="#specialoffersy">Спецпредложения</a></li>
-						<li><a onclick="hideMenu()" href="#sotrud">Сотрудничество</a></li>
-						<li><a onclick="hideMenu()" href="#contacts">Контакты</a></li>
-					</ul>
-					<ul class="lv_lang">
-						<li><a onclick="hideMenu()" href="#avtomoikay">Pakalpojumi un cenas</a></li>
-						<li><a onclick="hideMenu()" href="#specialoffersy">Speciālie piedāvājumi</a></li>
-						<li><a onclick="hideMenu()" href="#sotrud">Sadarbība</a></li>
-						<li><a onclick="hideMenu()" href="#contacts">Kontakti</a></li>
-					</ul>
-					<div id="select-lang-mobile">
-						<img onclick="selectRu();" id="selectRu" src="images/ru.png">
-						<img onclick="selectLv();" id="selectLv" src="images/lv.png">
-					</div>
-				</menu>
-			</nav>
+			<div id="facebook">
+				<a href="#"><img src="images/facebook.png"></a>
+			</div>
+			<div id="contacts1">
+				<img id="phone" src="images/phone.png">
+				<p id="num">27010167, 25393950</p>
+				<p class="ru_lang" id="time">Время работы - 9:00-21:00 Пн-Вс</p>
+				<p class="lv_lang" id="time">Darba laiks - 9:00-21:00 Pirm.-Sv.</p>
+			</div>
+</div>
+</div>
 			<p class="ru_lang" id="title0">Автомойка<br>шиномонтаж<br>детейлинг-услуги</p>
-			<p class="ru_lang not-inline" id="title">(химчистка,полировка фар и кузова)</p>
-			<p class="ru_lang not-inline" id="title1">Мы зарекомендовали себя, как одна из лучших автомоек в Риге.<br>Мы гордимся своей репутацией и гарантируем качество нашей работы.</p>
-			<p class="lv_lang not-inline"id="title0">Automazgātava<br>Riepu montāža<br>Dīteilinga pakalpojumi</p>
-			<p class="lv_lang not-inline" id="title">(ķīmiskā tīrīšana, lukturu un virsbūves pulēšana)</p>
-			<p class="lv_lang not-inline" id="title1">Mēs esam pazīstami kā viena no labākajām automazgātavām Rīgā. Mēs lepojamies ar gūto reputāciju un garantējam mūsu darba kvalitāti.</p>
+			<p class="ru_lang" id="title">(химчистка,полировка фар и кузова)</p>
+			<p class="ru_lang" id="title1">Мы зарекомендовали себя, как одна из лучших автомоек в Риге.<br>Мы гордимся своей репутацией и гарантируем качество нашей работы.</p>
+			<p class="lv_lang"id="title0">Automazgātava<br>Riepu montāža<br>Dīteilinga pakalpojumi</p>
+			<p class="lv_lang" id="title">(ķīmiskā tīrīšana, lukturu un virsbūves pulēšana)</p>
+			<p class="lv_lang" id="title1">Mēs esam pazīstami kā viena no labākajām automazgātavām Rīgā.<br> Mēs lepojamies ar gūto reputāciju un garantējam mūsu darba kvalitāti.</p>
 			<button class="ru_lang" onclick="aboutUs();" id="details">О нас</button>
-			<button class="lv_lang" onclick="aboutUs();" id="details">Vairāk</button>
-		</div>
+			<button  class="lv_lang" onclick="aboutUs();" id="details"  >Vairāk</button>
+			<img id="but" src="images/but.png">
+</div>
+
+
 	</header>
-	<main>
+
 		<div id="avtomoika">
 			<p class="ru_lang" id="avtomoikay">АВТОМОЙКА</p>
-			<p class="lv_lang" id="avtomoikay">Automazgātava</p>
+			<p class="lv_lang" id="avtomoikayy">Automazgātava</p>
 			<table cellspacing="0" cellpadding="0" id="types">
 				<tr id="typesp">
 					<td>
@@ -393,7 +420,7 @@
 				</tr>
 				<tr>
 					<td>Полировка фар</td>
-					<td>15 € за шт.  </td>
+					<td>от 15 € за шт.  </td>
 				</tr>
 			</table>
 		</div>
@@ -424,88 +451,89 @@
 		</div>
 		<div id="specialoffers">
 			<div class="ru_lang" id="specialoffersy"><p>Спецпредложения</p></div>
-			<div class="lv_lang" id="specialoffersy"><p>Speciālie piedāvājumi </p></div>
-		<div id="sp_offers">
-				<div id="sp_offer1">
-					<p class="ru_lang">В воскресенье всем девушкам за рулем скидка 10%</p>
-					<p class="lv_lang">Svētdienās visām dāmām pie stūres 10% atlaide</p>
-					<button class="ru_lang" onclick="contact();" id="det1">Записаться</button>
-					<button class="lv_lang" onclick="contact();" id="det1">Pierakstīties</button>
-				</div>
+			<div class="lv_lang" id="specialoffersyy"><p>Speciālie piedāvājumi </p></div>
+			<div id="sp_offers">
+					<div id="sp_offer1">
+						<p class="ru_lang">В воскресенье всем девушкам за рулем скидка 10%</p>
+						<p class="lv_lang">Svētdienās visām dāmām pie stūres 10% atlaide</p>
+						<button class="ru_lang" onclick="contact();" id="det1">Записаться</button>
+						<button class="lv_lang" onclick="contact();" id="det1">Pierakstīties</button>
+					</div>
 
-				<div id="sp_offer2">
-					<p class="ru_lang">При покупке комплексной мойки (верх, воск, салон) приятный бонус от нас</p>
-					<p class="lv_lang">Pasūtot komplekso mazgāšanu (virspuse, vasks, salons) patīkams bonuss no mums </p>
-					<button class="ru_lang" onclick="contact();" id="det2">Записаться</button>
-					<button class="lv_lang" onclick="contact();" id="det2">Pierakstīties</button>
-				</div>
+					<div id="sp_offer2">
+						<p class="ru_lang">При покупке комплексной мойки (верх, воск, салон) приятный бонус от нас</p>
+						<p class="lv_lang">Pasūtot komplekso mazgāšanu (virspuse, vasks, salons) patīkams bonuss no mums </p>
+						<button class="ru_lang" onclick="contact();" id="det2">Записаться</button>
+						<button class="lv_lang" onclick="contact();" id="det2">Pierakstīties</button>
+					</div>
 			</div>
-		</div>
 	</div>
 </div>
 <div id="sotrud">
-	<h6 class="ru_lang not-inline">Сотрудничесво</h6>
-	<p class="ru_lang not-inline">Мы сотрудничаем со многими фирмами на хороших условиях, ждем новых заявок. Месяц отсрочки платежа + хорошие скидки - sialvl1group@gmail.com</p>
-	<h6 class="lv_lang not-inline">Sadarbība</h6>
-	<p class="lv_lang not-inline">Mēs sadarbojamies ar daudzām firmām ar labiem nosacījumiem, gaidām jaunus pieteikumus. Maksājuma atlikšana uz mēnesi + labas atlaides - sialvl1group@gmail.com</p>
+	<h6 class="ru_lang">Сотрудничество</h6>
+	<p class="ru_lang">Мы сотрудничаем со многими фирмами на хороших условиях, ждем новых заявок. Месяц отсрочки<br/> платежа + хорошие скидки - <a style="color: #0000ff;text-decoration: underline;" href="mailto:sialvl1group@gmail.com">sialvl1group@gmail.com</a></p>
+	<h6 class="lv_lang">Sadarbība</h6>
+	<p class="lv_lang">Mēs sadarbojamies ar daudzām firmām ar labiem nosacījumiem, gaidām jaunus pieteikumus. Maksājuma atlikšana<br/> uz mēnesi + labas atlaides - <a style="color: #0000ff;text-decoration: underline;" href="mailto:sialvl1group@gmail.com">sialvl1group@gmail.com</a></p>
 </div>
 <!--<div id="zoomImg"></div>-->
 <div id="photos">
-	<p class="ru_lang not-inline" id="photosy">Фотогалерея</p>
-	<p class="lv_lang not-inline" id="photosy">Fotogalerija</p>
-			<img onclick="openPhoto(this);" src="images/7.jpg">
-			<img onclick="openPhoto(this);" src="images/8.jpg">
-			<img onclick="openPhoto(this);" src="images/3.jpg">
-			<img onclick="openPhoto(this);" src="images/6.jpg">
-			<img onclick="openPhoto(this);" src="images/5.jpg">
-			<img onclick="openPhoto(this);" src="images/4.jpg">
-			<img onclick="openPhoto(this);" src="images/1.jpg">
-			<img onclick="openPhoto(this);" src="images/2.jpg">
+	<p class="ru_lang" id="photosy">Фотогалерея</p>
+	<p class="lv_lang" id="photosy">Fotogalerija</p>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/7.jpg"><img onclick="openPhoto" src="images/7.jpg" alt="cargo1"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/8.jpg"><img onclick="openPhoto(this);" src="images/8.jpg" alt="cargo2"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/3.jpg"><img onclick="openPhoto(this);" src="images/3.jpg" alt="cargo3"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/6.jpg"><img onclick="openPhoto(this);" src="images/6.jpg" alt="cargo4"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/5.jpg"><img onclick="openPhoto(this);" src="images/5.jpg" alt="cargo5"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/4.jpg"><img onclick="openPhoto(this);" src="images/4.jpg" alt="cargo6"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/1.jpg"><img onclick="openPhoto(this);" src="images/1.jpg" alt="cargo7"></a>
+			<a class="fancybox" data-fancybox-group="gallery" href="images/2.jpg"><img onclick="openPhoto(this);" src="images/2.jpg" alt="cargo8"></a>
 		<!--<button>посмотреть все</button>-->
-	<p class="ru_lang not-inline" id="contacts">Контакты</p>
-	<p class="lv_lang not-inline" id="contacts">Kontakti</p>
+	<p class="ru_lang" id="contacts">Контакты</p>
+	<p class="lv_lang" id="contactss">Kontakti</p>
 </div>
-</main>
+</div>
 <footer>
 	<div id="footerinfo">
-		<div class="footer-wrapper">
-			<p id="zaglav" class="ru_lang not-inline">Информация</p>
-			<p class="ru_lang not-inline"><a href="#specialoffersy">Спецпредложения</a></p>
-			<p class="ru_lang not-inline"><a href="#photosy">Фотогалерея</a></p>
+		<div>
+			<p id="zaglav" class="ru_lang">Информация</p>
+			<p class="ru_lang"><a href="#specialoffersy">Спецпредложения</a></p>
+			<p class="ru_lang"><a href="#photosy">Фотогалерея</a></p>
 
-			<p id="zaglav" class="lv_lang not-inline">Informācija</p>
-			<p class="lv_lang not-inline"><a href="#specialoffersy">Speciālie piedāvājumi</a></p>
-			<p class="lv_lang not-inline"><a href="#photosy">Fotogalerija</a></p>
+			<p id="zaglav" class="lv_lang">Informācija</p>
+			<p class="lv_lang"><a href="#specialoffersy">Speciālie piedāvājumi</a></p>
+			<p class="lv_lang"><a href="#photosy">Fotogalerija</a></p>
 		</div>
-		<div class="footer-wrapper">
-			<p id="zaglav" class="ru_lang not-inline">услуги</p>
-			<p class="ru_lang not-inline"><a href="#avtomoikay">Автомойка</a></p>
-			<p class="ru_lang not-inline"><a href="#shinomontazhy">Шиномонтаж</a></p>
-			<p class="ru_lang not-inline"><a href="#d_offersy">Детейлинг-услуги</a></p>
-			<p id="zaglav" class="lv_lang not-inline">Pakalpojumi</p>
-			<p class="lv_lang not-inline"><a href="#avtomoikay">Automazgātava</a></p>
-			<p class="lv_lang not-inline"><a href="#shinomontazhy">Riepu montāža</a></p>
-			<p class="lv_lang not-inline"><a href="#d_offersy">Dīteilinga pakalpojumi</a></p>
+		<div>
+			<p id="zaglav" class="ru_lang">услуги</p>
+			<p class="ru_lang"><a href="#avtomoikay">Автомойка</a></p>
+			<p class="ru_lang"><a href="#shinomontazhy">Шиномонтаж</a></p>
+			<p class="ru_lang"><a href="#d_offersy">Детейлинг-услуги</a></p>
+			<p id="zaglav" class="lv_lang">Pakalpojumi</p>
+			<p class="lv_lang"><a href="#avtomoikay">Automazgātava</a></p>
+			<p class="lv_lang"><a href="#shinomontazhy">Riepu montāža</a></p>
+			<p class="lv_lang"><a href="#d_offersy">Dīteilinga pakalpojumi</a></p>
 		</div>
-		<div class="footer-wrapper">
-			<p id="zaglav" class="ru_lang not-inline">контакты</p>
-			<p class="ru_lang not-inline"><img src="images/locationpin.png">Azenes iela 5, IC Olimpia</p>
-			<p class="ru_lang not-inline"><img id="fnum" src="images/phone.png">27010167, 25393950</p>
+		<div>
+			<p id="zaglav" class="ru_lang">контакты</p>
+			<p class="ru_lang"><img src="images/locationpin.png">Azenes iela 5, IC Olimpia</p>
+			<p class="ru_lang"><img style="width: 5%;" id="fnum" src="images/phone.png">27010167, 25393950</p>
+<p class="ru_lang"><img style="width: 6.5%;" id="fmail" src="images/mail.png"><a href="mailto:sialvl1group@gmail.com">sialvl1group@gmail.com</a></p>
+			<p id="zaglav" class="lv_lang">Kontakti</p>
+			<p class="lv_lang"><img src="images/locationpin.png">Azenes iela 5, IC Olimpia</p>
+<p class="lv_lang"><img style="width: 5%;" id="fnum" src="images/phone.png">27010167, 25393950</p>
+			<p class="lv_lang"><img style="width: 6.5%;" id="fmail" src="images/mail.png"><a  href="mailto:sialvl1group@gmail.com">sialvl1group@gmail.com</a></p>
 
-			<p id="zaglav" class="lv_lang not-inline">Kontakti</p>
-			<p class="lv_lang not-inline"><img src="images/locationpin.png">Azenes iela 5, IC Olimpia</p>
-			<p class="lv_lang not-inline"><img id="fnum" src="images/phone.png">27010167, 25393950</p>
-
 		</div>
-		<div class="footer-wrapper">
-			<p id="zaglav" class="ru_lang not-inline">Наши соцсети</p>
-			<p id="zaglav" class="lv_lang not-inline">Soc. tīkli</p>
+		<div>
+			<p id="zaglav" class="ru_lang">Наши соцсети</p>
+			<p id="zaglav" class="lv_lang">Soc. tīkli</p>
 			<a href="https://www.instagram.com/washline_riga/"><img id="footinst" src="images/instagram.png"></a>
 			<a href="#"><img id="footfb" src="images/facebook.png"></a>
+
 		</div>
 	</div>
-	<p class="ru_lang not-inline" id="footbot">Washline 2020. Все права защищены.</p>
-	<p class="lv_lang not-inline" id="footbot">Washline 2020. Visas tiesibas aizsargatas.</p>
+	<p class="ru_lang" id="footbot">Washline 2020. Все права защищены.</p>
+	<p class="lv_lang" id="footbot">Washline 2020. Visas tiesibas aizsargatas.</p>
 </footer>
 
 </body>

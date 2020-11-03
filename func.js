@@ -1,4 +1,4 @@
-function aboutUs() {
+﻿function aboutUs() {
 	document.getElementById("aboutus").style.display = "block";
 }
 function aboutUsHide() {
@@ -13,44 +13,38 @@ function contactHide() {
 function selectLv() {
 	document.getElementsByTagName("input")[0].placeholder = "E-mail vai telefona numurs";
 	document.getElementsByTagName("textarea")[0].placeholder = "Jūsu ziņojums";
-	document.title = "LV Washline - Kvalitātīva automazgātava Rīga.";
+	document.title = "Washline - Kvalitātīva automazgātava Rīga.";
 	var divsToShow = document.getElementsByClassName("lv_lang");
     for(var i = 0; i < divsToShow.length; i++){
     	if (divsToShow[i].id == "aboutus" || divsToShow[i].id == "mail") {
         divsToShow[i].style.display = "none";
+    	} else {
+        divsToShow[i].style.display = "block";
     	}
-			else if (!divsToShow[i].classList.contains("not-inline")) {
-        divsToShow[i].style.display = "inline-block";
-    	}
-			else {
-				divsToShow[i].style.display = "block";
-			}
     }
+    document.getElementById("but").style.marginTop = "0.7%";
     var divsToHide = document.getElementsByClassName("ru_lang");
     for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].style.display = "none";
     }
 }
 function selectRu() {
-	document.getElementsByTagName("input")[0].placeholder = "Ваше E-mail или телефон";
+	document.getElementsByTagName("input")[0].placeholder = "Ваше E-mail  или телефон";
 	document.getElementsByTagName("textarea")[0].placeholder = "Ваше сообщение";
 	document.title = "RUS Washline - качественная автомойка в Риге";
 	var divsToShow = document.getElementsByClassName("ru_lang");
-  for (var i = 0; i < divsToShow.length; i++) {
-  	if (divsToShow[i].id == "aboutus" || divsToShow[i].id == "mail") {
-      divsToShow[i].style.display = "none";
-  	}
-		else if(!divsToShow[i].classList.contains("not-inline")) {
-      divsToShow[i].style.display = "inline-block";
-  	}
-		else {
-			divsToShow[i].style.display = "block";
-		}
-  }
-  var divsToHide = document.getElementsByClassName("lv_lang");
-  for(var i = 0; i < divsToHide.length; i++) {
-  	divsToHide[i].style.display = "none";
-  }
+    for(var i = 0; i < divsToShow.length; i++){
+    	if (divsToShow[i].id == "aboutus" || divsToShow[i].id == "mail") {
+        divsToShow[i].style.display = "none";
+    	} else {
+        divsToShow[i].style.display = "block";
+    	}
+    }
+    document.getElementById("but").style.marginTop = "2.5%";
+    var divsToHide = document.getElementsByClassName("lv_lang");
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";
+    }
 }
 function toggleBurger(e) {
 	const burger = document.getElementById("burger-btn");
@@ -99,7 +93,7 @@ if ($data.msg) {
 }*/
 /*
 function openPhoto() {
-	/*dirct.style.transform = "scale(2)";
+	dirct.style.transform = "scale(2)";
 	dirct.style.position = "fixed";
 	dirct.style.left = "36%";
 	document.getElementById("zoomImg").backgroundImage = "url('images/7.png')";
