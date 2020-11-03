@@ -1011,6 +1011,10 @@ footer p {
 }
 
 @media screen and (max-width: 866px) {
+	#avtomoika {
+		top: 150px;
+	}
+
 	#otable tr td:first-child,
 	#otable tr td:last-child {
 		padding-right: 0;
@@ -1043,6 +1047,10 @@ footer p {
 		display: block;
 	}
 
+	#sotrud {
+		padding-top: 150px;
+	}
+
 	#mobile-menu {
 		display: flex;
 	}
@@ -1070,10 +1078,6 @@ footer p {
 @media screen and (max-width: 375px) {
 	#title1 {
 		margin-bottom: 30px;
-	}
-
-	#avtomoika {
-		top: -40px;
 	}
 
 	.car-cell img {
