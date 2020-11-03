@@ -1,0 +1,1104 @@
+* {
+	margin: 0;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: #E5E5E5;
+	font-family: 'Futura PT';
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+#up {
+	cursor: pointer;
+	position: fixed;
+	width: 50px;
+	bottom: 50px;
+	right: 50px;
+	z-index: 100;
+}
+
+#message {
+	cursor: pointer;
+	position: fixed;
+	width: 50px;
+	bottom: 120px;
+	right: 50px;
+	z-index: 100;
+}
+
+header {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background: url(images/background.png);
+	background-size: cover;
+	background-position: center;
+}
+
+#header1 {
+	width: 90%;
+	margin: auto;
+}
+
+#burger-btn {
+	padding: 0;
+	border: none;
+	outline: none;
+	display: none;
+	background: transparent;
+}
+
+#burger-icon {
+	fill: white;
+	width: 50px;
+	height: 50px;
+	transition: .25s;
+}
+
+#mobile-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: -200px;
+	display: none;
+	width: 200px;
+	height: 100%;
+	background: #A83040;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+	transition: .25s;
+}
+
+#mobile-menu.opened {
+	right: 0;
+	transition: .25s;
+}
+
+#burger-btn.opened #burger-icon {
+	transform: rotate(90deg);
+	transition: .25s;
+}
+
+#mobile-menu ul {
+	list-style: none;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#mobile-menu ul li {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-align: left;
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0em;
+	color: #F6F6F6;
+	text-shadow: 0px 4px 20px #000000;
+}
+
+textarea, input {
+	font-family: Futura PT;
+	font-size: 16px;
+}
+
+#mail {
+	display: none;
+	position: fixed;
+	left: 30%;
+	top: 135px;
+	z-index: 200;
+	width: 30%;
+	height: 320px;
+	background-color: #FFFFFF;
+	padding-left: 4%;
+	padding-top: 2%;
+	padding-right: 4%;
+	padding-bottom: 25px;
+}
+
+#mail p#titlem {
+	text-align: center;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	padding-bottom: 15px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+	margin-top: 15px;
+}
+
+#mail #email {
+	width: 90%;
+	height: 40px;
+	background: #EFEFEF;
+	border: 0;
+	padding: 0px 15px;
+	outline: 0;
+}
+
+#mail textarea {
+	width: 90%;
+	height: 80px;
+	background: #EFEFEF;
+	border: 0;
+	margin-top: 20px;
+	padding: 15px;
+	outline: 0;
+	resize: none;
+}
+
+#mail button {
+	cursor: pointer;
+	background: #A83040;
+	padding: 0px 20px;
+	font-family: Futura PT;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	margin-left: 4%;
+	margin-top: 10px;
+	box-shadow: 0;
+	outline: 0;
+	border: 0;
+	color: #F6F6F6;
+	text-transform: uppercase;
+}
+
+#mail div {
+	margin-top: 0px;
+	display: grid;
+	height: 55px;
+	grid-template-columns: 4% 20% 66%;
+	grid-column-gap: 15px;
+}
+
+#mail #bottomline {
+	display: grid;
+	width: 100%;
+	height: 20px;
+	grid-template-columns: 1% 40%;
+	grid-gap: 57%;
+}
+
+.g-recaptcha {
+	transform: scale(0.6);
+	margin-top: -30px
+}
+
+#mail p {
+	padding-top: 6px;
+	margin-left: -10px;
+}
+
+#aboutus {
+	display: none;
+	position: fixed;
+	left: 10%;
+	top: 5%;
+	justify-content: justify;
+	z-index: 200;
+	width: 76vw;
+	height: 85%;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding-left: 4%;
+	padding-top: 2%;
+	padding-right: 4%;
+}
+
+#aboutus p:nth-child(2) {
+	font-family: Futura PT Bold;
+	font-size: 16px;
+	padding-bottom: 25px;
+}
+
+#aboutus p {
+	font-family: Futura PT;
+	font-size: 18px;
+}
+
+#logo1 {
+	width: 202px;
+	height: 53px;
+	margin-top: 40px;
+}
+
+#cross, #cross1 {
+	position: relative;
+	margin-left: 100%;
+	cursor: pointer;
+}
+
+#aboutus p:nth-child(3) {
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	padding-bottom: 10px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+}
+
+#logo {
+	vertical-align: middle;
+	width: 240px;
+}
+
+#address {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	padding: 20px 0;
+}
+
+#address p {
+	font-family: 'Futura PT';
+	font-style: normal;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.01em;
+	color: rgba(255, 255, 255, 0.8);
+	text-shadow: 0px 4px 20px #000000;
+}
+
+#address p.ru_lang {
+	display: inline;
+}
+
+#select-lang,
+#select-lang-mobile {
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 18px;
+	right: 28px;
+}
+
+#select-lang-mobile {
+	display: block;
+	top: auto;
+	bottom: 28px;
+	right: 28px;
+}
+
+#selectLv {
+	margin-left: 5px;
+}
+
+#select-lang img,
+#select-lang-mobile img {
+	cursor: pointer;
+	width: 24px;
+	vertical-align: middle;
+}
+
+nav {
+	position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header ul {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	vertical-align: middle;
+}
+
+header ul li {
+	display: inline;
+	padding: 0 10px;
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0em;
+	color: #F6F6F6;
+	text-shadow: 0px 4px 20px #000000;
+}
+
+.social-links-wrapper {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* instagram */
+#instagram {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* facebook */
+#facebook {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.num-and-time {
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#contacts1 {
+	width: auto;
+	display: inline-block;
+}
+
+#contacts1 #phone {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+#contacts1 p#num {
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 16px;
+	color: #F6F6F6;
+	text-shadow: 0px 4px 20px #000000;
+	display: inline-block;
+}
+
+#contacts1 p.time {
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 14px;
+	letter-spacing: 0.01em;
+	color: rgba(255, 255, 255, 0.7);
+	text-shadow: 0px 4px 20px #000000;
+}
+
+#title0, #title {
+	width: 47%;
+	margin-bottom: 0;
+	margin-top: 100px;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 30px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #F6F6F6;
+}
+
+#title {
+	margin: 5px 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+#title1 {
+	margin-top: 20px;
+	margin-bottom: 60px;
+	width: 50%;
+	margin-left: 0;
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	color: #F6F6F6;
+	text-shadow: 0px 4px 20px #000000;
+}
+
+#details {
+	margin-bottom: 0;
+	width: 160px;
+	height: 45px;
+	cursor: pointer;
+	background: #A83040;
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	box-shadow: 0;
+	outline: 0;
+	border: 0;
+	color: #F6F6F6;
+}
+
+#avtomoika {
+	top: -80px;
+	padding-top: 120px;
+	background-image: url('images/avtomoika.png');
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: relative;
+	text-align: center;
+	z-index: 80;
+	width: 100%;
+}
+
+#avtomoikay {
+	padding-bottom: 0px;
+	padding-top: 0;
+	font-family: Futura PT Bold;
+	width: 100%;
+	font-size: 26px;
+	font-style: normal;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+}
+
+#types {
+	text-align: left;
+	width: 90%;
+	margin: auto;
+	font-family: Futura PT Bold;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+#types tr td {
+	line-height: 35px;
+}
+
+#types tr td:nth-child(1n+2) {
+	text-align: center;
+}
+
+.car-cell {
+	padding: 0 10px;
+}
+
+#types div {
+	font-family: Futura PT Bold;
+	color: #000000;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0.03em;
+	color: #000000;
+}
+
+#types div {
+	text-align: center;
+	line-height: 35px;
+}
+
+#types #typesp p {
+	text-align: left;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	font-family: 'Futura PT Bold';
+	color: #3052A8;
+	padding-top: 40px;
+}
+
+#types span {
+	font-family: Futura PT;
+	line-height: 30px;
+}
+
+#shinomontazh {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+	width: 100%;
+	background: url(images/shinomontazh.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 50px;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+}
+
+#shinomontazh p:nth-child(2), #shinomontazh p:nth-child(4) {
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 18px;
+	width: 100%;
+	padding-top: 10px;
+	letter-spacing: 0.03em;
+	color: #FFFFFF;
+}
+
+#stypes {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 90%;
+	margin: auto;
+	padding-bottom: 50px;
+}
+
+#stypes table {
+	margin-top: 40px;
+	text-align: left;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 18px;
+	letter-spacing: 0.03em;
+	color: #FFFFFF;
+}
+
+#stypes table tr td:first-child {
+	padding-right: 40px;
+}
+
+#stypes tr {
+	line-height: 40px;
+}
+
+.stypesn {
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #4579FF;
+}
+
+#d_offers {
+	width: 90%;
+	margin: auto;
+}
+
+#d_offers p {
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin-top: 40px;
+	color: #A83040;
+}
+
+#d_offersy {
+	font-size: 18px;
+}
+
+#otable {
+	text-align: right;
+	margin-top: 30px;
+	width: 100%;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 18px;
+	letter-spacing: 0.03em;
+	color: #000000;
+	padding-bottom: 30px;
+}
+
+#otable td {
+	line-height: 35px;
+	vertical-align: top;
+}
+
+#otable tr td:first-child {
+	text-align: left;
+	width: 65%;
+	padding-right: 90px;
+}
+
+#otable tr td:last-child {
+	padding-right: 3%;
+}
+
+#otable span {
+	font-family: Futura PT;
+	letter-spacing: 0.03em;
+}
+
+#specialoffers {
+	position: relative;
+	width: 100%;
+	z-index: 10;
+	padding-top: 110px;
+	background-image: url('images/spoffersbg.png');
+	padding-bottom: 160px;
+	height: 570px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#specialoffersy p {
+	width: 100%;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	padding-bottom: 20px;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+}
+
+#sp_offers {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	height: 500px;
+	margin: auto;
+	margin-top: 20px;
+	color: #FFFFFF;
+	box-sizing: border-box;
+}
+
+#sp_offers button {
+	background: #A83040;
+	margin-top: 0px;
+	padding: 7px 37px;
+	margin-left: -0.5%;
+	margin-right: -0.5%;
+	font-family: Futura PT;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	box-shadow: 0;
+	outline: 0;
+	border: 0;
+	color: #F6F6F6;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#sp_offers div p {
+	text-transform: uppercase;
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	line-height: 40px;
+	letter-spacing: 0.06em;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+#sp_offer2 {
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: space-between;
+	background-image: url('images/sp_offer2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	line-height: 40px;
+	padding: 225px 40px 40px 40px;
+	width: 50%;
+	margin-left: 20px;
+}
+
+#sp_offer2 p {
+	text-align: right;
+}
+
+#sp_offer1 {
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: space-between;
+	background-image: url('images/sp_offer1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 225px 40px 40px 40px;
+	width: 50%;
+}
+
+#det1,
+#det2 {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 175px;
+	height: 54px;
+	margin: 0 !important;
+}
+
+#det2 {
+	align-self: flex-end;
+}
+
+#sp_offer1 p {
+	text-align: left;
+}
+
+#sotrud {
+	text-align: center;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#sotrud h6, #photos p, p#contacts {
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 26px;
+	line-height: 40px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #A83040;
+}
+
+p#contacts {
+	padding-top: 15px;
+}
+
+#sotrud p {
+	font-family: Futura PT Bold;
+	font-size: 18px;
+	margin-top: 10px;
+	line-height: 30px;
+	letter-spacing: 0.03em;
+	color: #000000;
+}
+
+#photos {
+	width: 100vw;
+	background-image: url('images/photos.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-top: 90px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+}
+
+#photos img {
+	height: 19vw;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#photos button {
+	background: #A83040;
+	margin-top: 0px;
+	padding: 7px 37px;
+	font-family: Futura PT;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	box-shadow: 0;
+	outline: 0;
+	border: 0;
+	color: #F6F6F6;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#photos p:first-child {
+	font-size: 29px;
+	padding-bottom: 20px;
+}
+
+footer {
+	padding: 70px 20px;
+	background-image: url('images/footerbg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#footerinfo {
+	text-align: left;
+	display: flex;
+	width: 90%;
+	margin: auto;
+}
+
+#footerinfo div p#zaglav {
+	font-family: Futura PT Bold;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#footerinfo div {
+	padding-right: 5%;
+}
+
+#footerinfo p {
+	font-family: Futura PT;
+	font-style: normal;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+#footerinfo p {
+	padding-bottom: 12px;
+}
+
+#fnum {
+	margin-top: 15px;
+}
+
+#footerinfo div:last-child {
+	text-align: right;
+}
+
+#footerinfo div:nth-child(3) img {
+	margin-right: 10px;
+}
+
+#footinst {
+	margin-right: 15px;
+}
+
+footer p {
+	line-height: 20px;
+	font-family: Futura PT;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 5px;
+	color: #FFFFFF;
+}
+
+#footbot {
+	padding-bottom: 20px;
+	padding-top: 30px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.lv_lang {
+	display: none;
+}
+
+@media screen and (max-width: 950px) {
+	#stypes {
+		flex-direction: column;
+	}
+
+	#up {
+		right: 20px;
+		bottom: 80px;
+	}
+
+	#message {
+		right: 20px;
+		bottom: 20px;
+	}
+
+	#specialoffers {
+		padding-bottom: 120px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#types #typesp p {
+		padding-top: 0;
+	}
+
+	#stypes table:firs-child {
+		margin-right: 0;
+	}
+
+	#stypes tr td:nth-child(2) {
+		text-align: center;
+	}
+
+	#stypes tr td {
+		padding-right: 0;
+	}
+
+	#sp_offers {
+		flex-direction: column;
+		height: auto;
+	}
+
+	#sp_offer1,
+	#sp_offer2 {
+		width: calc(100% - 80px);
+	}
+
+	#sp_offer1 p,
+	#sp_offer2 p {
+		margin-bottom: 10px;
+	}
+
+	#sp_offer2 {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+
+	#specialoffers {
+		height: auto;
+	}
+
+	#contacts1 {
+		display: none;
+	}
+
+	nav {
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 90%;
+		background: black;
+		padding: 20px 5%;
+		z-index: 100;
+	}
+
+	#title0 {
+		width: auto;
+		margin-top: 0;
+		text-align: center;
+	}
+
+	#title {
+		width: auto;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	#title1 {
+		width: auto;
+	}
+
+	#header1 {
+		padding-top: 150px;
+		text-align: center;
+	}
+
+	#header1 p {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#address {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 866px) {
+	#otable tr td:first-child,
+	#otable tr td:last-child {
+		padding-right: 0;
+	}
+
+	#otable tr td {
+		padding-right: 0;
+	}
+
+	.car-cell img {
+		width: 50px;
+		height: 50px;
+	}
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#logo {
+		align-self: flex-start;
+		align-self: flex-start !important;
+		float: left;
+		left: 35px;
+		position: absolute;
+		top: 25px;
+	}
+
+	#burger-btn {
+		display: block;
+	}
+
+	#mobile-menu {
+		display: flex;
+	}
+
+	.pc-menu {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#footerinfo {
+		flex-direction: column;
+	}
+
+	.footer-wrapper {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	#footerinfo div:last-child {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#title1 {
+		margin-bottom: 30px;
+	}
+
+	#avtomoika {
+		top: -40px;
+	}
+
+	.car-cell img {
+		width: 35px;
+		height: 35px;
+	}
+
+	#logo {
+		width: 150px;
+		height: auto;
+		top: 35px;
+	}
+}
+
+@font-face {
+	font-family: 'Futura PT';
+	src: url('fonts/FuturaPT-Book.woff');
+}
+
+@font-face {
+	font-family: 'Futura PT Bold';
+	src: url('fonts/FuturaPT-Bold.woff');
+}
+
+@font-face {
+	font-family: 'Futura PT Medium';
+	src: url('fonts/FuturaPT-Medium.woff');
+}
