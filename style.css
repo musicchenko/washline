@@ -1492,6 +1492,11 @@ footer p {
 @media screen and (max-width: 800px) and (max-height: 390px) {
 	header {
 		background-size: cover !important;
+		font-size:
+	}
+
+	#title1 {
+		font-size: 16px;
 	}
 }
 
