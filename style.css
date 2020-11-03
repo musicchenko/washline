@@ -902,7 +902,7 @@ footer p {
 	display: none;
 }
 
-.pc-menu {
+.logo-container.mobile-menu {
 	display: none;
 }
 
@@ -927,6 +927,14 @@ footer p {
 }
 
 @media screen and (max-width: 1200px) {
+	.logo-container.mobile-menu {
+		display: block;
+	}
+
+	.logo-container.pc-menu {
+		display: none;
+	}
+
 	#types #typesp p {
 		padding-top: 0;
 	}
