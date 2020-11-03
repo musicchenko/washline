@@ -14,13 +14,13 @@
 * {
 	margin: 0;
 	scroll-behavior: smooth;
-	-webkit-tap-highlight-color: transparent;
 }
 html {
 
 }
 body {
-	min-width: 1257px;
+min-width: 1257px;
+
 	background-color: #E5E5E5;
 	font-family: "Futura PT";
 }
@@ -105,7 +105,7 @@ textarea, input {
 
 	background: #EFEFEF;
 	border: 0;
-	padding: 0px 15px;
+	padding: 0px 15px; 
 	outline: 0;
 }
 #mail textarea {
@@ -114,14 +114,14 @@ textarea, input {
 	background: #EFEFEF;
 	border: 0;
 	margin-top: 20px;
-	padding: 15px;
+	padding: 15px; 
 	outline: 0;
 	resize: none;
 }
 #mail button {
 	cursor: pointer;
 	background: #A83040;
-	padding: 0px 20px;
+	padding: 0px 20px;	
 	font-family: Futura PT;
 	font-style: normal;
 	font-weight: 500;
@@ -140,7 +140,7 @@ textarea, input {
 	margin-top: 0px;
 	display: grid;
 	height: 55px;
-	grid-template-columns: 4% 20% 66%;
+	grid-template-columns: 4% 20% 66%;	
 	grid-column-gap: 15px;
 }
 #mail #bottomline {
@@ -207,15 +207,15 @@ textarea, input {
 	left: 4%;
 	top: 58px;
 }
-#address {
-  position: absolute;
-  height: 26px;
-  margin-top: -25px;
-  margin-left: 206px;
+#adress {
+    position: absolute;
+    height: 26px;
+    margin-top: -45px;
+    margin-left: 206px;
 }
 
-#address p {
-	padding-top: 16px;
+#adress p {
+	padding-top: 15px;
 	font-family: "Futura PT";
 	font-style: normal;
 	font-size: 16px;
@@ -239,7 +239,7 @@ textarea, input {
 }
 header ul {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-right: 132px;
 }
 header ul li {
@@ -328,13 +328,13 @@ header ul li {
 }
 #title {
 	margin: 5px 4%;
-	padding: 0;
+	padding: 0;	
 	font-size: 18px;
 }
 #title1 {
 	margin-top: 20px;
 	margin-bottom: 55px;
-
+	
 	margin-left: 4%;
 	font-family: Futura PT;
 	font-style: normal;
@@ -381,7 +381,16 @@ header ul li {
 	margin: 4% auto 0 auto;
 	height: 43px;
 }
-
+@media screen and (min-device-width: 1200px) and (max-device-height:600px) { 
+	#but{
+		margin: -4% auto 0 auto;
+	}
+}
+@media screen and (max-device-width: 1200px) and (max-device-height:470px) { 
+	#but{
+		margin: -4% auto 0 auto;
+	}
+}
 #avtomoika {
 	top: -80px;
 	padding-top: 120px;
@@ -407,21 +416,29 @@ header ul li {
 }
 #types {
 	text-align: left;
+	display: grid;
+	grid-template-columns: 6fr 1fr 1fr 1fr;
 	width: 90%;
-	margin: auto;
+	margin-left: 6%;
 	font-family: Futura PT Bold;
 	font-size: 16px;
 	margin-bottom: 0px;
 }
-
-#types tr td {
+#types div.typesn {
+	text-align: left;
+}
+#types div {
+	font-family: Futura PT Bold;
+	color: #000000;
+	font-style: normal;
+	font-size: 16px;
+	letter-spacing: 0.03em;
+	color: #000000;
+}
+#types div {
+	text-align: center;
 	line-height: 35px;
 }
-
-#types tr td:nth-child(1n+2) {
-	text-align: center;
-}
-
 .container-fluid {
     margin: 0 auto;
     width: 1305px;
@@ -465,16 +482,9 @@ padding-top: 116px;
 	letter-spacing: 0.03em;
 	color: #FFFFFF;
 }
-#stypes {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 90%;
-	margin: auto;
-	padding-bottom: 50px;
-}
-
 #stypes table {
+	width: 90%;
+	margin-left: 8%;
 	margin-top: 40px;
 	text-align: left;
 	font-family: Futura PT Bold;
@@ -483,13 +493,15 @@ padding-top: 116px;
 	letter-spacing: 0.03em;
 	color: #FFFFFF;
 }
-
-#stypes table tr td:first-child {
-	padding-right: 40px;
-}
-
 #stypes tr {
 	line-height: 40px;
+}
+#stypes tr td:nth-child(2) {
+	padding-right: 200px;
+}
+#stypes td {
+	padding-right: 60px;
+  
 }
 .stypesn {
 	font-family: Futura PT Bold;
@@ -511,6 +523,7 @@ padding-top: 116px;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	margin-top: 40px;
+margin-bottom: -65px;
 	color: #A83040;
 }
 #d_offersy {
@@ -538,7 +551,7 @@ padding-top: 116px;
 	padding-right: 90px;
 }
 #otable tr td:last-child {
-	padding-right: 3%;
+	padding-right: 3%; 
 }
 #otable span {
 	font-family: Futura PT;
@@ -567,13 +580,15 @@ padding-top: 116px;
 	color: #A83040;
 }
 #sp_offers {
-	display: flex;
-	justify-content: space-between;
-	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 93%;
 	height: 500px;
-	margin: auto;
+	margin-right: 4%;
 	margin-top: 20px;
+	margin-left: 4%;
 	color: #FFFFFF;
+	grid-column-gap: 20px;
 	box-sizing: border-box;
 }
 #sp_offers button {
@@ -581,7 +596,7 @@ padding-top: 116px;
 	margin-top: 0px;
 	padding: 7px 37px;
 	margin-left: -0.5%;
-	margin-right: -0.5%;
+	margin-right: -0.5%;	
 	font-family: Futura PT;
 	font-style: normal;
 	font-weight: 500;
@@ -611,7 +626,9 @@ padding-top: 116px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	line-height: 40px;
-	padding: 225px 40px 40px 40px;
+	padding-top: 225px;
+	padding-right: 40px; 
+	padding-left: 40px;
 }
 #sp_offer2 p {
 	text-align: right;
@@ -620,43 +637,25 @@ padding-top: 116px;
 	background-image: url("images/sp_offer1.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	line-height: 40px;
-	padding: 225px 40px 40px 40px;
+	padding-top: 225px;
+	padding-left: 40px; 
+	padding-left: 40px;
 }
 #sp_offer1 p {
 	text-align: left;
 }
-
-#sp_offer1 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 50%;
+#det1, #det2 {
+	position: absolute;
+	top: 600px;
 }
-
-#sp_offer2 {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin-left: 20px;
+#det1 {
+	position: absolute;
+	top: 600px;
+	left: 100px;
 }
-
-#det1,
 #det2 {
-	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: 175px;
-	height: 54px;
-	margin: 0 !important;
+	right: 84px;
 }
-
-#det2 {
-	align-self: flex-end;
-}
-
 #sotrud {
 	text-align: center;
 
@@ -723,16 +722,17 @@ p#contacts {
 	padding-bottom: 20px;
 }
 footer {
-	padding: 70px 70px 0;
+	padding-top: 70px;
+	padding-left: 8%;
 	background-image: url("images/footerbg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 #footerinfo {
 	text-align: left;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 90%;
 }
 #footerinfo div p#zaglav {
 	font-family: Futura PT Bold;
@@ -780,12 +780,19 @@ footer p {
 	color: #FFFFFF;
 }
 #footbot {
-	left: 0;
-	text-align: center;
 	padding-bottom: 20px;
 	padding-top: 30px;
 	font-size: 18px;
 }
+@media (max-device-width:978px){
+	header{
+		height: 600px;
+	}
+}
+@media screen and (min-device-width: 1001px) and (max-device-width:1100px) { 
+
+}
+@media screen and (min-device-width: 901px) and (max-device-width:1000px) { 
 
 #types div {
     font-family: Futura PT Bold;
@@ -796,6 +803,14 @@ footer p {
     color: #000000;
 }
 
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+}
+}
+@media screen and (min-device-width: 801px) and (max-device-width:900px) { 
+
 #types div {
     font-family: Futura PT Bold;
     color: #000000;
@@ -805,6 +820,11 @@ footer p {
     color: #000000;
 }
 
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+}
 #mail {
     display: none;
     position: fixed;
@@ -819,6 +839,8 @@ footer p {
     padding-right: 4%;
     padding-bottom: 25px;
 }
+}
+@media screen and (min-device-width: 751px) and (max-device-width:800px) { 
 
 #types div {
     font-family: Futura PT Bold;
@@ -829,6 +851,11 @@ footer p {
     color: #000000;
 }
 
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+}
 #mail {
     display: none;
     position: fixed;
@@ -843,6 +870,8 @@ footer p {
     padding-right: 4%;
     padding-bottom: 25px;
 }
+}
+@media screen and (min-device-width: 701px) and (max-device-width:750px) { 
 
 #types div {
     font-family: Futura PT Bold;
@@ -853,6 +882,11 @@ footer p {
     color: #000000;
 }
 
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+}
 #mail {
     display: none;
     position: fixed;
@@ -867,6 +901,8 @@ footer p {
     padding-right: 4%;
     padding-bottom: 25px;
 }
+}
+@media screen and (min-device-width: 601px) and (max-device-width:700px) { 
 
 #types div {
     font-family: Futura PT Bold;
@@ -877,19 +913,10 @@ footer p {
     color: #000000;
 }
 
-#mail {
-    display: none;
-    position: fixed;
-    left: 30%;
-    top: 23px;
-    z-index: 200;
-    width: 30%;
-    height: 320px;
-    background-color: #FFFFFF;
-    padding-left: 4%;
-    padding-top: 2%;
-    padding-right: 4%;
-    padding-bottom: 25px;
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 12px;
 }
 #mail {
     display: none;
@@ -904,6 +931,35 @@ footer p {
     padding-top: 2%;
     padding-right: 4%;
     padding-bottom: 25px;
+}
+}
+@media screen and (min-device-width: 501px) and (max-device-width:600px) { 
+#sotrud h6, #photos p, p#contacts {
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #A83040;
+}
+#mail {
+    display: none;
+    position: fixed;
+    left: 30%;
+    top: 23px;
+    z-index: 200;
+    width: 30%;
+    height: 320px;
+    background-color: #FFFFFF;
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-right: 4%;
+    padding-bottom: 25px;
+}
+#photos p:first-child {
+    font-size: 12px;
+    padding-bottom: 20px;
 }
 #otable {
     text-align: right;
@@ -943,11 +999,27 @@ footer p {
     color: #000000;
 }
 
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 10px;
+}
+}
+@media screen and (min-device-width: 401px) and (max-device-width:500px) { 
+#sotrud h6, #photos p, p#contacts {
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 9.5px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #A83040;
+}
 .stypesn {
     font-family: Futura PT Bold;
     font-style: normal;
     font-size: 14px;
-
+ 
     line-height: 20px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -969,54 +1041,10 @@ footer p {
     color: #3052A8;
     padding-top: 40px;
 }
-#otable {
-    text-align: right;
-    margin-top: 30px;
-    margin-left: 6%;
-    width: 90%;
-    font-family: Futura PT Bold;
-    font-style: normal;
-    font-size: 21.5px;
-    letter-spacing: 0.03em;
-    color: #000000;
-    padding-bottom: 30px;
-}
-#types div {
-    font-family: Futura PT Bold;
-    color: #000000;
-    font-style: normal;
-    font-size: 9px;
-    letter-spacing: 0.03em;
-    color: #000000;
-}
 
-
-.stypesn {
-    font-family: Futura PT Bold;
-    font-style: normal;
-    font-size: 14px;
-
-    line-height: 20px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #4579FF;
-}
-
-#sotrud a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 11px;
-}
-
-#types #typesp p {
-    text-align: left;
-    font-style: normal;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-family: Futura PT Bold;
-    color: #3052A8;
-    padding-top: 40px;
+#photos p:first-child {
+    font-size: 9.5px;
+    padding-bottom: 20px;
 }
 #otable {
     text-align: right;
@@ -1041,7 +1069,108 @@ footer p {
     padding-bottom: 64px;
     font-family: Futura PT Bold;
     font-style: normal;
-    font-size: 26px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #A83040;
+}
+#sotrud p {
+    font-family: Futura PT Bold;
+    font-size: 9px;
+    margin-top: 10px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+#types div {
+    font-family: Futura PT Bold;
+    color: #000000;
+    font-style: normal;
+    font-size: 9px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 10px;
+}
+}
+@media screen and (min-device-width: 300px) and (max-device-width:400px) { 
+#sotrud h6, #photos p, p#contacts {
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 9.5px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #A83040;
+}
+.stypesn {
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 14px;
+    
+    line-height: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4579FF;
+}
+
+#sotrud a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+
+#types #typesp p {
+    text-align: left;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: Futura PT Bold;
+    color: #3052A8;
+    padding-top: 40px;
+}
+#sotrud p {
+    font-family: Futura PT Bold;
+    font-size: 9px;
+    margin-top: 9px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+#photos p:first-child {
+    font-size: 9.5px;
+    padding-bottom: 20px;
+}
+#otable {
+    text-align: right;
+    margin-top: 30px;
+    margin-left: 6%;
+    width: 90%;
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 21.5px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    padding-bottom: 30px;
+}
+#shinomontazh {
+    padding-top: 116px;
+    margin-top: 42px !important;
+    padding-bottom: 100px;
+    text-align: center;
+    background: url(images/shinomontazh.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 64px;
+    font-family: Futura PT Bold;
+    font-style: normal;
+    font-size: 10px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #A83040;
@@ -1055,349 +1184,11 @@ footer p {
     color: #000000;
 }
 
-.mobile-version {
-	display: none;
+
+
+#footbot {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 10px;
 }
-
-.mobile-header ul {
-	margin: 0;
-}
-
-#burger-btn {
-	padding: 0;
-	border: none;
-	outline: none;
-	display: block;
-	background: transparent;
-}
-
-#burger-icon {
-	fill: white;
-	width: 50px;
-	height: 50px;
-	transition: .25s;
-}
-
-#mobile-menu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	right: -200px;
-	width: 200px;
-	height: 100%;
-	background: #A83040;
-	z-index: -1;
-	margin: 0;
-	padding: 0;
-	transition: .25s;
-}
-
-#mobile-menu.opened {
-	right: 0;
-	transition: .25s;
-}
-
-#burger-btn.opened #burger-icon {
-	transform: rotate(90deg);
-	transition: .25s;
-}
-
-#mobile-menu ul {
-	list-style: none;
-	padding: 0;
-	vertical-align: middle;
-}
-
-#mobile-menu ul li {
-	display: block;
-	width: 100%;
-	padding: 10px 0;
-	text-align: left;
-	font-family: Futura PT;
-	font-style: normal;
-	font-size: 16px;
-	letter-spacing: 0em;
-	color: #F6F6F6;
-	text-shadow: 0px 4px 20px #000000;
-}
-
-.mobile-header {
-	z-index: 100;
-}
-
-.mobile-logo {
-	position: fixed;
-}
-
-.mobile-logo img {
-	width: 200px;
-	height: auto;
-}
-
-#select-lang-mobile {
-	top: auto;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
-
-#select-lang-mobile img {
-	cursor: pointer;
-	width: 24px;
-}
-
-.car-cell {
-	padding: 0 10px;
-}
-
-.car-cell img {
-	width: 90px;
-	height: auto;
-}
-
-#footerinfo div:last-child {
-	text-align: center;
-}
-
-.middle-menu {
-	display: none;
-}
-
-@media screen and (max-width: 1280px) {
-	body {
-		min-width: auto;
-	}
-
-	.pc-version {
-		display: none;
-	}
-
-	.mobile-version {
-		display: block;
-	}
-
-	.mobile-logo {
-		top: 15px;
-		left: 20px;
-	}
-
-	.mobile-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: calc(100% - 50px);
-		padding: 20px 25px;
-		background: black;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}
-
-	#burger-btn {
-		display: none;
-	}
-
-	.middle-menu {
-		display: block;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	#burger-btn {
-		display: block;
-	}
-
-	.middle-menu {
-		display: none;
-	}
-
-	.mobile-logo {
-		top: 30px;
-		left: 20px;
-	}
-
-	.mobile-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: calc(100% - 50px);
-		padding: 20px 25px;
-		background: black;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}
-
-	#title,
-	#title0,
-	#title1,
-	#header1 {
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-	}
-
-	#sotrud p,
-	#photos p:first-child,
-	#sotrud h6,
-	p#contacts,
-	#shinomontazhy {
-	}
-
-	#stypes {
-		flex-direction: column;
-	}
-
-	#sotrud {
-		padding: 100px 0;
-	}
-
-	#mail {
-		left: 5%;
-		right: 5%;
-		width: auto;
-		top: 20%;
-	}
-
-	#aboutus {
-		height: auto;
-		top: 20%;
-		bottom: 20%;
-		overflow: auto;
-	}
-
-	#sp_offers div p {
-		font-size: 18px;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	#sp_offers {
-		flex-direction: column;
-	}
-
-	#sp_offer1 {
-		width: calc(100% - 80px);
-	}
-
-	#sp_offer1 p,
-	#sp_offer2 p {
-		margin-bottom: 20px;
-	}
-
-	#sp_offer2 {
-		width: calc(100% - 80px);
-		margin-left: 0;
-		margin-top: 20px;
-	}
-
-	#sp_offers div#sp_offer1,
-	#sp_offers div#sp_offer2 {
-		padding-top: 50px;
-	}
-
-	#specialoffers {
-		height: 500px;
-	}
-
-	.car-cell img {
-		width: 50px;
-		height: auto;
-	}
-
-	#title,
-	#title0 {
-		width: auto;
-	}
-
-	.footer-block a {
-		margin: auto;
-	}
-
-	#footerinfo div {
-		padding: 0;
-	}
-
-	.footer-block {
-		margin: auto;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	#footerinfo div p#zaglav {
-		text-align: center;
-	}
-
-	#footerinfo {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	#otable {
-		width: 90%;
-		margin: auto;
-	}
-
-	#otable tr td:first-child {
-		padding: 0;
-	}
-
-	#otable tr td:last-child {
-		padding: 0;
-	}
-
-	#header1 {
-		width: 90%;
-		margin: auto;
-	}
-
-	#up {
-		left: auto;
-		right: 20px;
-		bottom: 80px;
-	}
-
-	#message {
-		left: auto;
-		right: 20px;
-		bottom: 20px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	#specialoffers {
-		height: 630px;
-	}
-
-	#cross {
-		margin-left: 95%;
-	}
-
-	#types #typesp p {
-		padding-top: 0;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	#specialoffers {
-		height: 730px;
-	}
-}
-
-@media screen and (max-width: 360px) {
-	.car-cell {
-		padding: 0 15px;
-	}
-
-	.car-cell img {
-		width: 40px;
-	}
-
-	#types tr td {
-		padding: 0;
-	}
 }
