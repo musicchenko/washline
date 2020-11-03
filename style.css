@@ -1469,6 +1469,10 @@ footer p {
 	#types #typesp p {
 		padding-top: 0;
 	}
+
+	#types tr td {
+		font-size: 14px !important;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -1488,5 +1492,13 @@ footer p {
 
 	#types tr td {
 		padding: 0;
+	}
+
+	#types tr td {
+		font-size: 12px !important;
+	}
+
+	#otable tr td {
+		font-size: 14px;
 	}
 }
