@@ -1034,7 +1034,7 @@ footer p {
 		justify-content: flex-end;
 	}
 
-	#logo {
+	#logo-container {
 		align-self: flex-start;
 		align-self: flex-start !important;
 		float: left;
