@@ -1167,7 +1167,7 @@ footer p {
 	display: none;
 }
 
-@media screen and (max-width: 1280px) {
+/*@media screen and (max-width: 1280px) {
 	body {
 		min-width: auto;
 	}
@@ -1208,9 +1208,54 @@ footer p {
 	.middle-menu {
 		display: block;
 	}
-}
+}*/
 
 @media screen and (max-width: 1024px) {
+	body {
+		min-width: auto;
+	}
+
+	#sotrud {
+		padding: 100px 0;
+	}
+
+	.pc-version {
+		display: none;
+	}
+
+	.mobile-version {
+		display: block;
+	}
+
+	.mobile-logo {
+		top: 15px;
+		left: 20px;
+	}
+
+	.mobile-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: calc(100% - 50px);
+		padding: 20px 25px;
+		background: black;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	#burger-btn {
+		display: none;
+	}
+
+	.middle-menu {
+		display: block;
+	}
+
+	body {
+		min-width: auto;
+	}
+
 	#burger-btn {
 		display: block;
 	}
