@@ -1234,6 +1234,14 @@ footer p {
 		background-size: 300%;
 	}
 
+	#details {
+		display: none;
+	}
+
+	#cross {
+		position: fixed;
+	}
+
 	#footerinfo {
 		text-align: left;
 		display: flex;
@@ -1478,6 +1486,12 @@ footer p {
 @media screen and (max-width: 400px) {
 	#specialoffers {
 		height: 730px;
+	}
+}
+
+@media screen and (max-width: 800px) and (max-height: 390px) {
+	header {
+		background-size: cover !important;
 	}
 }
 
