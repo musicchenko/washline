@@ -508,6 +508,9 @@ padding-top: 116px;
 #stypes tr {
 	line-height: 40px;
 }
+#stypes tr td {
+	vertical-align: top;
+}
 .stypesn {
 	font-family: Futura PT Bold;
 	font-style: normal;

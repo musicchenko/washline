@@ -31,6 +31,10 @@ function selectLv() {
     for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].style.display = "none";
     }
+		if(window.innerWidth <= 1024) {
+			document.getElementsByClassName("details")[0].style.display = "none";
+			document.getElementsByClassName("details")[1].style.display = "none";
+		}
 }
 function selectRu() {
 	//document.getElementsByTagName("input")[0].placeholder = "Ваше E-mail  или телефон";
@@ -53,6 +57,10 @@ function selectRu() {
     for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].style.display = "none";
     }
+		if(window.innerWidth <= 1024) {
+			document.getElementsByClassName("details")[0].style.display = "none";
+			document.getElementsByClassName("details")[1].style.display = "none";
+		}
 }
 function toggleBurger(e) {
 	const burger = document.getElementById("burger-btn");
