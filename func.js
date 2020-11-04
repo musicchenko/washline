@@ -1,13 +1,23 @@
-﻿function aboutUs() {
+function showBlack() {
+	document.getElementById("black").style.display = "block";
+}
+function hideBlack() {
+	document.getElementById("black").style.display = "none";
+}
+function aboutUs() {
+	showBlack();
 	document.getElementById("aboutus").style.display = "block";
 }
 function aboutUsHide() {
+	hideBlack();
 	document.getElementById("aboutus").style.display = "none";
 }
 function contact() {
+	showBlack();
 	document.getElementById("mail").style.display = "block";
 }
 function contactHide() {
+	hideBlack();
 	document.getElementById("mail").style.display = "none";
 }
 function selectLv() {
