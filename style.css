@@ -390,6 +390,11 @@ header ul li {
 	display: block;
 	margin: 4% auto 0 auto;
 	height: 43px;
+	position: absolute;
+	margin: auto;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
 }
 
 #avtomoika {
