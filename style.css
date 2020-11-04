@@ -89,6 +89,7 @@ textarea, input {
 	left: 30%;
 	top: 135px;
 	z-index: 200;
+	text-align: center;
 	width: 30%;
 	height: 320px;
 	background-color: #FFFFFF;
