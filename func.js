@@ -11,8 +11,8 @@ function contactHide() {
 	document.getElementById("mail").style.display = "none";
 }
 function selectLv() {
-	document.getElementsByTagName("input")[0].placeholder = "E-mail vai telefona numurs";
-	document.getElementsByTagName("textarea")[0].placeholder = "Jūsu ziņojums";
+	//document.getElementsByTagName("input")[0].placeholder = "E-mail vai telefona numurs";
+	//document.getElementsByTagName("textarea")[0].placeholder = "Jūsu ziņojums";
 	document.title = "Washline - Kvalitātīva automazgātava Rīga.";
 	var divsToShow = document.getElementsByClassName("lv_lang");
     for(var i = 0; i < divsToShow.length; i++){
@@ -33,8 +33,8 @@ function selectLv() {
     }
 }
 function selectRu() {
-	document.getElementsByTagName("input")[0].placeholder = "Ваше E-mail  или телефон";
-	document.getElementsByTagName("textarea")[0].placeholder = "Ваше сообщение";
+	//document.getElementsByTagName("input")[0].placeholder = "Ваше E-mail  или телефон";
+	//document.getElementsByTagName("textarea")[0].placeholder = "Ваше сообщение";
 	document.title = "RUS Washline - качественная автомойка в Риге";
 	var divsToShow = document.getElementsByClassName("ru_lang");
     for(var i = 0; i < divsToShow.length; i++){

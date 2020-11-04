@@ -24,7 +24,10 @@ body {
 	background-color: #E5E5E5;
 	font-family: "Futura PT";
 }
-.lv_lang {
+/*.lv_lang {
+	display: none;
+}*/
+.ru_lang {
 	display: none;
 }
 a {
@@ -61,6 +64,8 @@ a {
 	width: 50px;
 	left: 90%;
 	z-index: 100;
+	background: #c32c3e;
+	border-radius: 60px;
 }
 header {
     width: 100%;
