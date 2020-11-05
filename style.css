@@ -1261,6 +1261,10 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
+	.waaarning {
+		display: none;
+	}
+
 	header {
 		background-size: 220%;
 	}
