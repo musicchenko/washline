@@ -633,6 +633,7 @@ padding-top: 116px;
 	background-repeat: no-repeat;
 	line-height: 40px;
 	padding: 225px 40px 40px 40px;
+	position: relative;
 }
 #sp_offer2 p {
 	text-align: right;
@@ -653,6 +654,7 @@ padding-top: 116px;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 50%;
+	position: relative;
 }
 
 #sp_offer2 {
@@ -663,18 +665,18 @@ padding-top: 116px;
 	margin-left: 20px;
 }
 
-#det1,
-#det2 {
-	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
+#det1 {
+	position: absolute;
 	width: 175px;
+	bottom: 30px;
 	height: 54px;
 	margin: 0 !important;
 }
 
 #det2 {
+	position: absolute;
+	margin: 0;
+	bottom: 30px;
 	align-self: flex-end;
 }
 
@@ -1406,6 +1408,12 @@ footer p {
 
 	#sp_offers {
 		flex-direction: column;
+		height: auto;
+	}
+
+	#det1,
+	#det2 {
+		bottom: 18px;
 	}
 
 	#sp_offer1 {
@@ -1421,6 +1429,7 @@ footer p {
 		width: calc(100% - 80px);
 		margin-left: 0;
 		margin-top: 20px;
+		position: relative;
 	}
 
 	#sp_offers div#sp_offer1,
@@ -1429,7 +1438,7 @@ footer p {
 	}
 
 	#specialoffers {
-		height: 500px;
+		height: 400px;
 	}
 
 	.car-cell img {
